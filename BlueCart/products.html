@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlueCart - Products</title>
+  <link rel="stylesheet" href="css/products.css">
+</head>
+<body onload="protectPage(); showProducts(); updateCartCount();">
+<header>
+  <a class="logo" href="index.html">BlueCart</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+    <a href="cart.html">Cart <span id="cartCount">0</span></a>
+    <a href="#" onclick="logout()">Logout</a>
+  </nav>
+</header>
+<main>
+  <h1>All Products</h1>
+  <div class="filter">
+    <button onclick="filterProducts('All')">All</button>
+    <button onclick="filterProducts('Books')">Books</button>
+    <button onclick="filterProducts('Electronics')">Electronics</button>
+    <button onclick="filterProducts('Furniture')">Furniture</button>
+    <button onclick="filterProducts('Kitchen')">Kitchen</button>
+  </div>
+  <section id="productList" class="grid"></section>
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>

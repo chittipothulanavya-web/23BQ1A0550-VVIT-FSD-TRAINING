@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlueCart - Cart</title>
+  <link rel="stylesheet" href="css/cart.css">
+</head>
+<body onload="protectPage(); showCart(); updateCartCount();">
+<header>
+  <a class="logo" href="index.html">BlueCart</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+    <a href="cart.html">Cart <span id="cartCount">0</span></a>
+    <a href="#" onclick="logout()">Logout</a>
+  </nav>
+</header>
+<main>
+  <h1>Your Cart</h1>
+  <section id="cartItems"></section>
+  <div id="cartTotal" class="total"></div>
+  <button id="buyBtn" class="buy" onclick="placeOrder()">Buy Selected Items</button>
+</main>
+<div id="orderPopup" class="popup">
+  <div class="popup-box"><h2>Order Placed! 🎉</h2><p>Your order was successfully placed.</p><button onclick="closeOrderPopup()">Continue Shopping</button></div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
